@@ -1,0 +1,58 @@
+.Sightseeing {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 0;
+    color: #000;
+}
+.Sightseeing__label {
+    margin: 0 auto 50px;
+}
+.Sightseeing__content-container {
+    display: grid;
+    grid-gap: 50px;
+
+    max-width: 1185px;
+}
+.Sightseeing__card {
+    display: flex;
+    grid-gap: 20px;
+}
+.Sightseeing__card_reverted {
+    display: flex;
+    flex-flow: row-reverse;
+    grid-gap: 20px;
+}
+.Sightseeing__card_text-container {
+    display: flex;
+    flex-flow: column;
+    grid-gap: 25px;
+    box-sizing: border-box;
+}
+.Sightseeing__card_description {
+    font-size: 14px;
+}
+
+@media (max-width: 450px) {
+    .Sightseeing__card, .Sightseeing__card_reverted {
+        flex-flow: column;
+        align-items: center;
+    }
+    .Sightseeing__card-description {
+        word-wrap: break-word;
+    }
+    .Sightseeing__label {
+        text-align: center;
+        font-size: 36px;
+    }
+    .Sightseeing {
+        grid-gap: 50px;
+        background: #fff;
+        padding: 100px 15px 0;
+    }
+
+    img {
+        max-width: 90vw;
+    }
+}
