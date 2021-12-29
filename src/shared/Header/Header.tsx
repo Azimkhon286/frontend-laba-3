@@ -5,7 +5,6 @@ export default function Header() {
 
     const [isShowMobileMenu, setIsShowMobileMenu] = useState<boolean>(false)
 
-    console.log(isShowMobileMenu)
     return (
         <header className={isShowMobileMenu ? "Header__layout_opened Header" : "Header"} id="header">
             <div className="Header__logo-container">

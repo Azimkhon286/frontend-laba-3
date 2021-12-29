@@ -58,23 +58,33 @@ const sightseeingArray = [
     },
 ]
 
+interface ISightseeingCardProps {
+    class: string,
+    title: string,
+    description: string[],
+}
+
 export default function Sightseeing() {
+    const getSightseeingCard = (cardInfo: ISightseeingCardProps, index: number) => (
+        <div className={cardInfo.class} key={index}>
+            <img src="images/bridge-image.png" alt="bridge"/>
+            <div className="Sightseeing__card_text-container">
+                <h4>{cardInfo.title}</h4>
+                {cardInfo.description.map((description, index) => (
+                    <p className="Sightseeing__card_description" key={index}>
+                        {description}
+                    </p>
+                ))}
+            </div>
+        </div>
+    )
+
     return (
         <section className="Sightseeing" id="sightseeing">
             <h2 className="Sightseeing__label">Достопримечательности</h2>
             <div className="Sightseeing__content-container">
-                {sightseeingArray.map((card, index) => (
-                    <div className={card.class} key={index}>
-                        <img src="images/bridge-image.png" alt="bridge"/>
-                        <div className="Sightseeing__card_text-container">
-                            <h4>{card.title}</h4>
-                            {card.description.map((description, index) => (
-                                <p className="Sightseeing__card_description" key={index}>
-                                    {description}
-                                </p>
-                            ))}
-                        </div>
-                    </div>
+                {sightseeingArray.map((cardInfo, index) => (
+                    getSightseeingCard(cardInfo, index)
                 ))}
             </div>
         </section>
