@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  color: #fff;
+  background: #EEEEEE;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: Amatic SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  opacity: .8;
+}
+
+h2 {
+  font-family: Amatic SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration-line: underline;
+
+  color: #585858;
+}
+
+h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+h6 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  opacity: .5;
+}
+
+a {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+a:-webkit-any-link {
+  color: unset;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .7;
+  border-bottom: 1px solid #fff;
+}
+
+span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+button {
+  padding: 17px 27px;
+  border: 1px solid #C3B182;
+  background: transparent;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: #C3B182;
+}

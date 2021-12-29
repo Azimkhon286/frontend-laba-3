@@ -1,0 +1,112 @@
+.Header__layout_opened {
+    bottom: 0;
+}
+
+.Header {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1185px;
+    width: 100%;
+}
+
+.Header__nav-container {
+    display: flex;
+    grid-gap: 30px;
+}
+
+.Header__logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.Header__mobile-menu {
+    display: none;
+}
+
+.Header__nav-container_opened {
+    position: absolute;
+    z-index: 50;
+    left: 150%;
+    margin-right: -50%;
+
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .Header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        transform: unset;
+        margin-right: unset;
+        width: auto;
+
+        padding: 15px 30px 20px;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    .Header__nav-container {
+        position: absolute;
+        transform: translate(-285%, 0);
+    }
+    .Header__logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .Header__logo-container svg {
+        width: 48px;
+        height: 43px;
+    }
+    .Header__mobile-menu {
+        display: block;
+    }
+
+    #pencet{
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        cursor:pointer;
+    }
+
+    #pencet span{
+        background-color:ghostwhite;
+        width:2em;
+        height:.2em;
+        margin:0.26em 0;
+        display:block;
+        transition: all .4s ease;
+        transform-origin:0 0;
+    }
+
+    .Header__mobile-menu_opened {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+    }
+
+    .Header__mobile-menu_opened span:nth-child(1) {
+        transform: rotate(45deg) translate(1px, -1px);
+    }
+
+    .Header__mobile-menu_opened span:nth-child(2) {
+        Transform: scaleX(0);
+    }
+
+    .Header__mobile-menu_opened span:nth-child(3) {
+        transform: rotate(-45deg) translate(1px, 0);
+    }
+}

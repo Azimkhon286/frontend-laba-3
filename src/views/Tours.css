@@ -1,0 +1,65 @@
+.Tours {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 0 65px;
+    background: #fff;
+    color: #000;
+}
+.Tours__content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    max-width: 1185px
+}
+
+.Tours__label {
+    margin: 0 auto 50px;
+}
+
+.Tours__card {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    grid-gap: 10px;
+
+    height: 380px;
+    max-width: 380px;
+    width: 100%;
+
+    background: url("/public/images/bridge-2.png") center no-repeat;
+    background-size: contain;
+    padding: 10px 25px;
+}
+.Tours__description-container {
+    display: grid;
+    grid-gap: 20px;
+
+}
+.Tours__description {
+    font-weight: 200;
+    font-size: 14px;
+}
+.Tours__price {
+    font-weight: 200;
+    font-size: 24px;
+}
+.Tours__info_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 450px) {
+    .Tours__content-container {
+        display: flex;
+        flex-flow: column;
+        padding: 0 15px;
+    }
+    .Tours__card {
+        background-size: cover;
+    }
+}
